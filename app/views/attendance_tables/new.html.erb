@@ -1,0 +1,11 @@
+<div class="span6">
+ <h2>签到内容：</h2>
+      
+ <%=form_for @attendance_table do |f|%>
+   <%= javascript_include_tag "ckeditor/init" %>
+   <%= f.text_area :content, :class => "ckeditor"  %>
+   <br> 
+   <%=submit_tag "Submit", class: "btn btn-large btn-primary " %>
+ <%end%>
+</div> 
+

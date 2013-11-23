@@ -1,0 +1,8 @@
+<div class="span6">
+<h2>员工签到信息：</h2>
+<p>签到人姓名:<%= current_user.username%></p>
+       
+<p>签到人联系方式:<%= current_user.phonenumber%></p>
+<p>签到时间：<%=Time.now.to_s(:db)%></p>
+<p>签到内容：<%=raw @attendance_table.content%> 
+
