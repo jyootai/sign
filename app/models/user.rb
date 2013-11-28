@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
          :rememberable, :validatable
 
   validates_presence_of :username, :phonenumber 	 
+
+  has_many :attendance_tables
 end

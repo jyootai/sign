@@ -1,8 +1,25 @@
-<div class="span6">
-<h2>员工签到信息：</h2>
-<p>    签到人姓名:<%= current_user.username%></p>
-
-<p>签到人联系方式:<%= current_user.phonenumber%></p>
-
-<p>签到时间：<%=Time.now.to_s(:db)%></p>
+<h1>员工签到信息表：</h1>
+<div class="show">
+<%=will_paginate%>
+  <% @users.each do |f| %>
+  <dl class="dl-horizontal">
+   <div class="name" > <dt>姓名：</dt>
+   <dd><%=f.username%></dd></div>
+   </dl>
+   <dl class="dl-horizontal">
+   <h4><dt> 联系方式：</dt>	
+   <dd><%=f.phonenumber%></dd></h4>
+    </dl>
+   		<%f.attendance_tables.each do |q|%>
+		<dl class="dl-horizontal">
+    <h4>  <dt>签到时间：</dt> 
+    <dd><%= q.updated_at%></dd></h4> 		  
+    </dl>
+    <dl class="dl-horizontal">
+    <h4> <dt>签到内容：</dt> 
+    <dd><%=raw q.content%></dd></h4>
+    </dl>
+        <%end%>
+<% end %>
+<%=will_paginate%>
 </div>

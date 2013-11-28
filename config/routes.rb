@@ -1,11 +1,14 @@
 Money::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
+  resources :attendance_tables
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  root to: 'users#index'
+# root to: 'users#index'
+  root to: 'attendance_tables#new'
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
+# root 'welcome#index'
+   resources :users
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

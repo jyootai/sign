@@ -47,3 +47,16 @@ gem 'execjs'
 gem 'therubyracer'
 gem 'devise'
 gem 'bootstrap-sass'
+
+
+gem 'paperclip' 
+gem "ckeditor"
+
+
+gem "cancan"
+
+
+
+
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'

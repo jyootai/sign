@@ -1,8 +1,19 @@
-<div class="span6">
-<h2>员工签到信息：</h2>
-<p>签到人姓名:<%= current_user.username%></p>
-       
-<p>签到人联系方式:<%= current_user.phonenumber%></p>
-<p>签到时间：<%=Time.now.to_s(:db)%></p>
-<p>签到内容：<%=raw @attendance_table.content%> 
-
+<h2>我的签到信息：</h2>
+<div class="show">
+<dl class="dl-horizontal">
+<div class="name"><dt>姓名：</dt>
+<dd><%= current_user.username%></dd></div>
+</dl>       
+<dl class="dl-horizontal">  
+<h4><dt>联系方式：</dt>
+<dd><%= current_user.phonenumber%></dd></h4>
+</dl>
+<dl class="dl-horizontal">
+<h4><dt>签到时间：</dt> 
+<dd><%=@attendance_table.updated_at%></dd></h4>
+</dl>
+<dl class="dl-horizontal">
+<h4><dt>签到内容：</dt>
+<dd><%=raw @attendance_table.content%></dd> </h4>
+</dl>
+</div>

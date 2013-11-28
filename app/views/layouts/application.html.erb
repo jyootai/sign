@@ -2,9 +2,18 @@
 <html>
 <head>
   <title><%=@title%></title>
+  <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript">$(document).ready(function() {
+		      if ($('textarea').length > 0) {
+		              var data = $('textarea');
+			              $.each(data, function(i) {
+					                  CKEDITOR.replace(data[i].id);
+							          });
+				          }
+					  });</script>
 </head>
 <body>
  <%= render 'layouts/header' %>

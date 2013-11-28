@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 
   def index
   
-  	@title="Home"
+  	@users=User.paginate(page: params[:page])
   end
   private
 

@@ -9,11 +9,12 @@
    Account <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-    <li><%= link_to "Profile", '#' %></li>
-     <li><%= link_to "Settings", '#' %></li>
+     <li> <%= link_to "Sign out", destroy_user_session_path, method: "delete" %></li>
+    <%if current_user.admin?%>
+     <li><%= link_to "Users", users_path %></li>
+     <%end%>
      <li class="divider"></li>
      <li>
-     <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
      </li>
       </ul>
       </li>

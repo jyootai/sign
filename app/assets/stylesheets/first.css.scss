@@ -47,17 +47,18 @@ input {
 	display: block;
 	 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	 font-size: 14px;
-	height: 20px;
-	margin-top:50px;
-	margin-bottom:-190px;
+	height: 10px;
+	margin-top:99px;
+	margin-bottom:-220px;
 }
 .slogan-title{
 	font-size:46px;
 	margin-bottom:40px;
+	color:#795D58;
 }
-p{
+h6{
 	font-size: 21px;
-	color: #999999
+	color:#999999;
 }
 .offset1{
 	margin-bottom:-180px;
@@ -68,4 +69,25 @@ p{
 	background:#f7f7f7;
 		   padding-left:110px;
 		   margin-top:60px;
+}
+.slo{
+	font-size:36px;
+	margin-bottom:-210px;
+	margin-top:60px;
+	color:#999999;
+	display:block;
+	line-height:60px;
+}
+h1{
+	color:#999999;
+	padding-left:10px;
+}
+.name{
+color:red;
+      font-size:22px;
+}
+.show{
+	margin-top:29px;
+	line-height:1px;
+background:#f7f7f7;
 }
