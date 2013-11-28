@@ -1,25 +1,11 @@
-<h1>员工签到信息表：</h1>
-<div class="show">
+<h1>所有员工</h1>
 <%=will_paginate%>
+<ul class="users">
   <% @users.each do |f| %>
-  <dl class="dl-horizontal">
-   <div class="name" > <dt>姓名：</dt>
-   <dd><%=f.username%></dd></div>
-   </dl>
-   <dl class="dl-horizontal">
-   <h4><dt> 联系方式：</dt>	
-   <dd><%=f.phonenumber%></dd></h4>
-    </dl>
-   		<%f.attendance_tables.each do |q|%>
-		<dl class="dl-horizontal">
-    <h4>  <dt>签到时间：</dt> 
-    <dd><%= q.updated_at%></dd></h4> 		  
-    </dl>
-    <dl class="dl-horizontal">
-    <h4> <dt>签到内容：</dt> 
-    <dd><%=raw q.content%></dd></h4>
-    </dl>
-        <%end%>
-<% end %>
+      <li>
+
+	<%= link_to f.username,f %>
+      </li>
+  <% end %>
+</ul>
 <%=will_paginate%>
-</div>

@@ -8,10 +8,12 @@ Money::Application.routes.draw do
   root to: 'attendance_tables#new'
   # You can have the root of your site routed with "root"
 # root 'welcome#index'
-   resources :users
+   resources :users do
+   end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+#match'/show', to: 'users#show',     via: 'get'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

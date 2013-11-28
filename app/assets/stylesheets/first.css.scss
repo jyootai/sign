@@ -80,14 +80,27 @@ h6{
 }
 h1{
 	color:#999999;
-	padding-left:10px;
+	      font-size:3em;
+	      letter-spacing:-2px;
+	      margin-bottom:30px;
+	      text-align:center;
 }
 .name{
-color:red;
-      font-size:22px;
+	color:red;
+      	font-size:22px;
+	margin-top:5px;
+	padding-top:5px;
 }
 .show{
 	margin-top:29px;
 	line-height:1px;
 background:#f7f7f7;
+}
+.users{
+	margin-left:30px;
+       li {
+		padding:10px 0;
+		border-top:1px solid  #eaeaea;
+		font-size:20px;
+	}
 }

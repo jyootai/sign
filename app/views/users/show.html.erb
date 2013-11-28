@@ -1,1 +1,21 @@
-<h1>员工1</h1>
+<h1>员工<%=@user.username%>的签到信息：</h1>
+<div class="show">
+<dl class="dl-horizontal"> 
+ <div class="name" > <dt>姓名：</dt>   
+ <dd> <%=@user.username%></dd></div`>
+ </dl>
+ <dl class="dl-horizontal">
+<h4><dt>联系方式：</dt>
+<dd><%=@user.phonenumber%></dd></h4>
+</dl>
+	<%@user.attendance_tables.each do |f|%>
+	<dl class="dl-horizontal">
+	<h4><dt>签到时间：</dt>
+	<dd><%=f.updated_at%></dd></h4>
+	</dl>
+	<dl class="dl-horizontal">
+	<h4><dt>签到内容：</dt>
+	<dd><%=raw f.content%></dd></h4>
+	</dl>
+	<%end%>
+  </div>
