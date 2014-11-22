@@ -8,7 +8,6 @@ class AttendanceTablesController < ApplicationController
   end
 
   def create
-#    p params[:attendance_table]
     @attendance_table = current_user.attendance_tables.build(attendance_table_params)
     if @attendance_table.save
       redirect_to @attendance_table
